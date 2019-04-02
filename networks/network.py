@@ -29,7 +29,7 @@ class ResNet34(nn.Module):
         self.fc2 = nn.Linear(2048, num_classes)
 
     def forward(self, x):
-        x = whitening(x)
+        # x = whitening(x)
         x = self.backbone.conv1(x)
         x = self.backbone.bn1(x)
         x = self.backbone.relu(x)
@@ -62,7 +62,7 @@ class ResNet50(nn.Module):
 
 
     def forward(self, x):
-        x = whitening(x)
+        #x = whitening(x)
         x = self.backbone.conv1(x)
         x = self.backbone.bn1(x)
         x = self.backbone.relu(x)
@@ -93,7 +93,7 @@ class ResNet101(nn.Module):
 
 
     def forward(self, x):
-        x = whitening(x)
+        #x = whitening(x)
         x = self.backbone.conv1(x)
         x = self.backbone.bn1(x)
         x = self.backbone.relu(x)
@@ -124,7 +124,7 @@ class ResNet152(nn.Module):
 
 
     def forward(self, x):
-        x = whitening(x)
+        #x = whitening(x)
         x = self.backbone.conv1(x)
         x = self.backbone.bn1(x)
         x = self.backbone.relu(x)

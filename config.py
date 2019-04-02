@@ -9,7 +9,8 @@ class DefaultConfigs(object):
     lr = 0.001
     width = 256
     height = 256
+    iter_smooth = 10
 
-
+    checkpoint = 'ResNet152.pth'
 
 config = DefaultConfigs()

@@ -1,8 +1,16 @@
 # -*- coding:utf-8 -*-
 
-def F1_score():
+def accuracy(output, target, topk=(1, 5)):
+    """Computes the precision@k for the specified values of k"""
+    maxk = max(topk)
+    batch_size = target.size(0)
 
-def sum_t():
+    _, pred = output.topk(maxk, 1, True, True)
+    pred = pred.t()
+    correct = pred.eq(target.view(1, -1).expand_as(pred))
 
-def Score(pred_loc, pred_cls, label_loc, lobel_cls):
-    for 
+    res = []
+    for k in topk:
+        correct_k = correct[:k].view(-1).float().sum(0, keepdim=True)
+        res.append(correct_k.mul_(100.0 / batch_size))
+    return res
