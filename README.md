@@ -23,7 +23,8 @@ pytorch==0.4.1
   ```
   python train.py
   ```
-* STEP4: inference
-  ```
-  python inference.py
-  ```
+
+## Results
+* 全部重新训练，所有层相同的lr，acc@top1 = 0.65
+* 冻结所有卷积层，只训练FC，acc@top1 = 0.926877
+* 冻结ResNet的前三个layer，训练layer4与FC，acc@top1 = 97.8774
