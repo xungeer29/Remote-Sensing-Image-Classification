@@ -45,6 +45,11 @@ inference.py
 README.md
 train.py
 ```
+## 网络结构
+* ResNet+avgpool+(l2_normal+dropout+fc1)+(l2_normal+dropout+fc2)
+* 损失函数: 交叉熵 Cross Entropy Loss
+* 优化器: Adam
+
 ## RUN
 * STEP0:
   ```
@@ -76,3 +81,4 @@ train.py
 * 全部重新训练，所有层相同的lr，acc@top1 = 0.65
 * 冻结所有卷积层，只训练FC，acc@top1 = 0.926877
 * 冻结ResNet的前三个layer，训练layer4与FC，acc@top1 = 97.8774
+* 这种纯净的、数据分布完全平衡的数据集，仔细调一调是可以达到无限接近100%的准确率的
