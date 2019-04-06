@@ -14,36 +14,36 @@
 
 ## 目录结构
 ```
-remote_sensing_image_classification/
+remote_sensing_image_classification/ # 根目录
 ▾ data/
-    label_list.txt
-    train.txt
-    valid.txt
+    label_list.txt # label
+    train.txt # 训练集路径及标注
+    valid.txt # 验证集路径及标注
 ▾ dataset/
     __init__.py
-    create_img_list.py
-    dataset.py
+    create_img_list.py # 随机8:2划分数据集，生成 ./data/ 文件夹下的txt文件
+    dataset.py # 数据读取
 ▾ figs/
-    acc.eps
-    acc.jpg
-    confusion_matrix.jpg
+    acc.eps # 精度曲线
+    acc.jpg # 精度曲线 矢量图
+    confusion_matrix.jpg # 混淆矩阵
 ▾ log/
-    log.txt
+    log.txt # 记录log
 ▾ metrics/
     __init__.py
-    metric.py
+    metric.py # 指标，主要是精度
 ▾ networks/
     __init__.py
-    lr_schedule.py
-    network.py
+    lr_schedule.py # 学习率的调整策略
+    network.py # 网络结构
 ▾ utils/
     __init__.py
-    plot.py
+    plot.py # 绘制曲线
 __init__.py 
-config.py
-inference.py
-README.md
-train.py
+config.py # 超参数的集合
+inference.py # 推理，前向，用于测试
+README.md # 说明
+train.py # 训练&验证脚本
 ```
 ## 网络结构
 * ResNet+avgpool+(l2_normal+dropout+fc1)+(l2_normal+dropout+fc2)
