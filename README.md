@@ -56,9 +56,11 @@ train.py # 训练&验证脚本
   git clone https://github.com/xungeer29/Remote-Sensing-Image-Classification
   cd Remote-Sensing-Image-Classification
   ```
-* STEP1: 添加文件搜索路径
+* STEP1: 添加文件搜索路径，更改数据集根目录
 
   将所有的`.py`文件的`sys.path.append`中添加的路径改为自己的项目路径
+
+  更改`config.py`中的`data_root`为数据集存放的根目录
 * STEP2: 划分训练集和本地验证集
   ```
   python dataset/create_img_list.py
