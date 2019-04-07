@@ -33,6 +33,12 @@ def train():
     elif config.model == 'ResNet34':
         backbone = models.resnet34(pretrained=True)
         model = ResNet34(backbone, num_classes=config.num_classes)
+    elif config.model == 'ResNet50':
+        backbone = models.resnet50(pretrained=True)
+        model = ResNet50(backbone, num_classes=config.num_classes)
+    elif config.model == 'ResNet101':
+        backbone = models.resnet101(pretrained=True)
+        model = ResNet101(backbone, num_classes=config.num_classes)
     elif config.model == 'ResNet152':
         backbone = models.resnet152(pretrained=True)
         model = ResNet152(backbone, num_classes=config.num_classes)

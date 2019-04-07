@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*- 
 class DefaultConfigs(object):
     data_root = '/media/gfx/data1/DATA/lida/UCMerced_LandUse/UCMerced_LandUse/Images' # 数据集的根目录
-    model = 'ResNet152' # ResNet34 使用的模型
+    model = 'ResNet152' # ResNet18, ResNet34, ResNet50, ResNet101, ResNet152 使用的模型
     freeze = True # 是否冻结卷基层
 
     seed = 1000 # 固定随机种子
