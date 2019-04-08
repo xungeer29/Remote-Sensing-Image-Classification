@@ -1,5 +1,5 @@
 # Remote-Sensing-Image-Classification
-## 数据集
+## Dataset
 一个纯净的、没有噪声的遥感图像数据集，共21类，每类100张图像，可以用于分类任务的入门练手
 
 在本次的项目中，将数据集按照 8:2 随机划分为训练集和验证集
@@ -12,7 +12,7 @@
 * python==2.7
 * pytorch==0.4.1
 
-## 目录结构
+## File Structure
 ```
 remote_sensing_image_classification/ # 根目录
 ▾ data/
@@ -45,7 +45,7 @@ inference.py # 推理，前向，用于测试
 README.md # 说明
 train.py # 训练&验证脚本
 ```
-## 网络结构
+## Network Architecture
 * ResNet+avgpool+(l2_normal+dropout+fc1)+(l2_normal+dropout+fc2)
 * 损失函数: 交叉熵 Cross Entropy Loss
 * 优化器: Adam
