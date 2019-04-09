@@ -4,6 +4,8 @@
 
 在本次的项目中，将数据集按照 8:2 随机划分为训练集和验证集
 
+项目中包含了精度曲线绘制、log记录等，算是一套完整的pipleline，可以针对不同的任务进行快速更改
+
 ```
 链接: https://pan.baidu.com/s/1Avcih8rARD2LoBp5S4n2ww 
 提取码: hp5f
